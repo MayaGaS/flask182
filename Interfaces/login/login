@@ -8,8 +8,8 @@
   <div class="container">
     <h2>Login</h2>
     <form action="login.php" method="POST">
-      <label for="username">Usuario</label>
-      <input type="text" id="username" name="username" placeholder="Introduzca Usuario" required>
+      <label for="username">RFC</label>
+      <input type="text" id="username" name="username" placeholder="Introduzca RFC" required>
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Introduzca Password" required>

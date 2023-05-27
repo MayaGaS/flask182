@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Administracion Medicos</title>
+  <link rel="stylesheet" href="AdmnistracionMedicos.css">
+</head>
+<body>
+  <h2>Administracion Medicos</h2>
+  <form>
+    <label for="rfc">RFC:</label>
+    <input type="text" id="rfc" name="rfc" required><br><br>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="apellido-paterno">Apellido Paterno:</label>
+    <input type="text" id="apellido-paterno" name="apellido-paterno" required><br><br>
+
+    <label for="apellido-materno">Apellido Materno:</label>
+    <input type="text" id="apellido-materno" name="apellido-materno" required><br><br>
+
+    <label for="rol">Rol:</label>
+    <input type="text" id="rol" name="rol" required><br><br>
+
+    <button type="submit">Registrar</button>
+    <button type="button" onclick="salir()">Salir</button>
+    
+  </form>
+
+  <script src="formulario.js"></script>
+</body>
+</html>

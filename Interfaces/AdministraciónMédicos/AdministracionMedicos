@@ -32,11 +32,6 @@
         <label for="rol">Rol:</label>
         <input type="text" id="rol" name="rol" required>
       </div>
-      <label>Rol: </label>
-    <select name="rol">
-        <option value="adminMedico">Medico Administrador</option>
-        <option value="medico">Medico</option>
-    </select><br><br>
 
       <div class="button-container">
         <button type="submit">Actualizar</button>

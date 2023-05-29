@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Administracion Medicos</title>
-  <link rel="stylesheet" href="AdmnistracionMedicos.css">
+  <title>Interfaz de Usuario</title>
+  <link rel="stylesheet" href="AdmnistracionMedicos.css"> 
 </head>
 <body>
-  <h2>Administracion Medicos</h2>
-  <form>
-    <label for="rfc">RFC:</label>
-    <input type="text" id="rfc" name="rfc" required><br><br>
+  <div class="container">
+    <h2>Administracion Medicos</h2>
+    <form>
+      <div class="form-group">
+        <label for="rfc">RFC:</label>
+        <input type="text" id="rfc" name="rfc" required>
+      </div>
 
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required><br><br>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
 
-    <label for="apellido-paterno">Apellido Paterno:</label>
-    <input type="text" id="apellido-paterno" name="apellido-paterno" required><br><br>
+      <div class="form-group">
+        <label for="apellido-paterno">Apellido Paterno:</label>
+        <input type="text" id="apellido-paterno" name="apellido-paterno" required>
+      </div>
 
-    <label for="apellido-materno">Apellido Materno:</label>
-    <input type="text" id="apellido-materno" name="apellido-materno" required><br><br>
+      <div class="form-group">
+        <label for="apellido-materno">Apellido Materno:</label>
+        <input type="text" id="apellido-materno" name="apellido-materno" required>
+      </div>
 
-    <label for="rol">Rol:</label>
-    <input type="text" id="rol" name="rol" required><br><br>
+      <div class="form-group">
+        <label for="rol">Rol:</label>
+        <input type="text" id="rol" name="rol" required>
+      </div>
+      <label>Rol: </label>
+    <select name="rol">
+        <option value="adminMedico">Medico Administrador</option>
+        <option value="medico">Medico</option>
+    </select><br><br>
 
-    <button type="submit">Registrar</button>
-    <button type="button" onclick="salir()">Salir</button>
-    
-  </form>
-
-  <script src="formulario.js"></script>
+      <div class="button-container">
+        <button type="submit">Actualizar</button>
+        <button type="submit">Salir</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>

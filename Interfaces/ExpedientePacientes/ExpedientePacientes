@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expediente Pacientes</title>
+  <link rel="stylesheet" href="ExpedientePacientes.css"> 
+</head>
+<body>
+  
+  <div class="container">
+    <h2>Informacion Medica</h2>
+    <div class="form-group">
+      <label for="doctor-name">Nombre del doctor:</label>
+      <input type="text" id="doctor-name">
+    </div>
+    
+    <h2>Informacion del Paciente</h2>
+    <div class="form-group">
+      <label for="patient-firstname">Nombre:</label>
+      <input type="text" id="patient-firstname">
+    </div>
+    <div class="form-group">
+      <label for="patient-lastname">Apellido Paterno:</label>
+      <input type="text" id="patient-lastname">
+    </div>
+    <div class="form-group">
+      <label for="patient-middlename">Apellido Materno:</label>
+      <input type="text" id="patient-middlename">
+    </div>
+    <div class="form-group">
+      <label for="patient-dob">Fecha de Nacimiento:</label>
+      <input type="date" id="patient-dob">
+    </div>
+    <div class="form-group">
+      <label for="patient-age">Edad:</label>
+      <input type="text" id="patient-age" readonly>
+    </div>
+    <div class="form-group">
+      <label for="patient-conditions">Enfermedades Cronicas:</label>
+      <textarea id="patient-conditions"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="patient-allergies">Alergias:</label>
+      <textarea id="patient-allergies"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="patient-family-history">Antecedentes Familiares:</label>
+      <textarea id="patient-family-history"></textarea>
+    </div>
+    
+    <div class="buttons">
+      <button class="accept">Aceptar</button>
+      <button class="add">Agregar</button>
+      <button class="update">Actualizar</button>
+      <button class="delete">Borrar</button>
+      <button class="exit">Salir</button>
+    </div>
+  </div>
+</body>
+</html>

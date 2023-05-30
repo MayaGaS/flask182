@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interfaz de Exploracion Medica</title>
+  <style>
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-image: url('CED.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+    }
+    
+    .patients-list {
+      flex: 1;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+    }
+    
+    .patients-list ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .patients-list li {
+      cursor: pointer;
+      padding: 10px;
+      margin-bottom: 5px;
+      background-color: #f0f0f0;
+    }
+    
+    .patients-list li:hover {
+      background-color: #e0e0e0;
+    }
+    
+    .patients-list li.selected {
+      background-color: #ccc;
+    }
+    
+    .exploration {
+      flex: 2;
+      padding: 20px;
+    }
+    
+    .diagnosis {
+      flex: 1;
+      padding: 20px;
+      border-left: 1px solid #ccc;
+    }
+    
+    h2 {
+      margin-top: 0;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .button-container {
+      margin-top: 20px;
+    }
+    
+    .button-container button {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="patients-list">
+      <h2>Lista de Pacientes</h2>
+      <ul>
+        <li>Paciente 1</li>
+        <li>Paciente 2</li>
+        <li>Paciente 3</li>
+        <!-- Agrega más pacientes según sea necesario -->
+      </ul>
+    </div>
+    
+    <div class="exploration">
+      <h2>Exploracion</h2>
+      <form>
+        <label for="appointment-date">Fecha de la cita:</label>
+        <input type="text" id="appointment-date">
+        
+        <label for="weight">Peso:</label>
+        <input type="number" id="weight">
+        
+        <label for="height">Altura:</label>
+        <input type="number" id="height">
+        
+        <label for="temperature">Temperatura:</label>
+        <input type="number" id="temperature">
+        
+        <label for="heart-rate">Latidos por Minuto:</label>
+        <input type="number" id="heart-rate">
+        
+        <label for="oxygen-saturation">Saturacion de Oxigeno:</label>
+        <input type="number" id="oxygen-saturation">
+        
+        <label for="glucose">Glucosa:</label>
+        <input type="number" id="glucose">
+        
+      </form>
+    </div>
+    
+    <div class="diagnosis">
+      <h2>Diagnostico</h2>
+      <form>
+        <label for="diagnosis">Diagnostico:</label>
+        <textarea id="diagnosis"></textarea>
+        
+        <label for="treatment">Tratamiento:</label>
+        <textarea id="treatment"></textarea>
+        
+        <label for="studies">Estudios:</label>
+        <textarea id="studies"></textarea>
+        
+        <div class="button-container">
+          <button>Guardar</button>
+          <button>Imprimir</button>
+          <button>Descargar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Obtiene todos los elementos <li> de la lista de pacientes
+    const patientItems = document.querySelectorAll('.patients-list li');
+    
+    // Agrega el evento click a cada elemento <li> de la lista de pacientes
+    patientItems.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remueve la clase 'selected' de todos los elementos
+        patientItems.forEach(item => item.classList.remove('selected'));
+        
+        // Agrega la clase 'selected' al elemento seleccionado
+        item.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>

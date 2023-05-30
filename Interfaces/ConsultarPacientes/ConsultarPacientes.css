@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('ConPac.jpg');
+    background-size: 100% 235%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+  }
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    align-items: center;
+    background-color: #ffffffb7;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .container h2 {
+    text-align: center;
+  }
+  .container input[type="text"],
+  .container input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
+  .container button {
+    background-color: #639fee;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    border-radius: 50px;
+  }
+  .container button:hover {
+    background-color: #2266f8;
+  }
+  

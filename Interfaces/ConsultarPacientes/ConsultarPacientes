@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consulta del Paciente</title>
+  <link rel="stylesheet" href="ConsultarPacientes.css">  
+</head>
+<body>
+  <div class="container">
+    <h2>Consulta del Paciente</h2><br>
+    <form action="login.php" method="POST">
+      <label for="username">Medico</label><br>
+      <input type="text" id="username" name="username" placeholder="Nombre del Medico" required>
+
+      <label for="password">Paciente</label><br>
+      <input type="password" id="password" name="password" placeholder="Nombre Completo del Paciente" required>
+
+      <label for="password">Fecha de Nacimiento</label><br>
+      <input type="text" id="heart-rate">
+
+      <div class="container-datos ">
+        <label for="heart-rate">Enfermedades Cronicas:</label><br>
+        <input type="text" id="heart-rate">
+        
+        <label for="oxygen-saturation">Alergias:</label><br>
+        <input type="text" id="oxygen-saturation">
+      </div>
+
+      <label for="password">Antecedentes Familiares</label><br>
+      <input type="text" id="oxygen-saturation">
+
+      <button type="submit">Editar</button>
+      <button type="submit">Aceptar</button>
+      <button type="submit">Salir</button>
+    </form>
+  </div>
+</body>
+</html>

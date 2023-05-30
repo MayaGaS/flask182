@@ -2,92 +2,7 @@
 <html>
 <head>
   <title>Interfaz de Exploracion Medica</title>
-  <style>
-    body {
-        text-align: center;
-        font-family: Arial, sans-serif;
-        background-image: url('CED.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        padding: 20px;
-        font-family: Arial, sans-serif;
-    }
-    
-    .container {
-      display: flex;
-    }
-    
-    .patients-list {
-      flex: 1;
-      padding: 20px;
-      border-right: 1px solid #ccc;
-    }
-    
-    .patients-list ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-    
-    .patients-list li {
-      cursor: pointer;
-      padding: 10px;
-      margin-bottom: 5px;
-      background-color: #f0f0f0;
-    }
-    
-    .patients-list li:hover {
-      background-color: #e0e0e0;
-    }
-    
-    .patients-list li.selected {
-      background-color: #ccc;
-    }
-    
-    .exploration {
-      flex: 2;
-      padding: 20px;
-    }
-    
-    .diagnosis {
-      flex: 1;
-      padding: 20px;
-      border-left: 1px solid #ccc;
-    }
-    
-    h2 {
-      margin-top: 0;
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    
-    input[type="text"],
-    input[type="number"] {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-    
-    textarea {
-      width: 100%;
-      height: 100px;
-      padding: 5px;
-      margin-bottom: 10px;
-    }
-    
-    .button-container {
-      margin-top: 20px;
-    }
-    
-    .button-container button {
-      margin-right: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="Cita_ED.css"> 
 </head>
 <body>
   <div class="container">
@@ -104,27 +19,37 @@
     <div class="exploration">
       <h2>Exploracion</h2>
       <form>
-        <label for="appointment-date">Fecha de la cita:</label>
-        <input type="text" id="appointment-date">
+
+        <div class = "container-datos">
+          <label for="appointment-date">Fecha de la cita:</label>
+          <input type="text" id="appointment-date">
+
+          <label for="weight">Peso:</label>
+          <input type="text" id="weight">
         
-        <label for="weight">Peso:</label>
-        <input type="number" id="weight">
-        
+        </div>
+
+        <div class="container-datos">
         <label for="height">Altura:</label>
-        <input type="number" id="height">
+        <input type="text" id="height">
         
         <label for="temperature">Temperatura:</label>
-        <input type="number" id="temperature">
-        
+        <input type="text" id="temperature">
+      </div>
+
+      <div class="container-datos ">
         <label for="heart-rate">Latidos por Minuto:</label>
-        <input type="number" id="heart-rate">
+        <input type="text" id="heart-rate">
         
         <label for="oxygen-saturation">Saturacion de Oxigeno:</label>
-        <input type="number" id="oxygen-saturation">
-        
+        <input type="text" id="oxygen-saturation">
+      </div>
+
+      <div class="container-datos">
         <label for="glucose">Glucosa:</label>
-        <input type="number" id="glucose">
-        
+        <input type="text" id="glucose">
+      </div>
+
       </form>
     </div>
     

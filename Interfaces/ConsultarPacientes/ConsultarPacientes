@@ -30,7 +30,6 @@
 
       <button type="submit">Editar</button>
       <button type="submit">Aceptar</button>
-      <button type="submit">Salir</button>
     </form>
   </div>
 </body>

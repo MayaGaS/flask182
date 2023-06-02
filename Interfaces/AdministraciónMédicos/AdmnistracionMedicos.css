@@ -2,11 +2,11 @@ body {
   text-align: center;
   font-family: Arial, sans-serif;
   background-image: url('adminMed.jpg');
-  background-size: 100% 100%;
+  background-size: 200% 200%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  padding: 20px;
+  padding: 400px;
 }
 .container {
   max-width: 400px;

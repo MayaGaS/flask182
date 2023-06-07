@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    background-image: url('img_exa.jpg');
+    background-size: 90% 300%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #F3FF00;
+    text-align: center;
+  }
+  
+  table {
+    margin: 0 auto;
+  }
+  

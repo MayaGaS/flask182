@@ -19,7 +19,14 @@ mysql = MySQL(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    curSelect = mysql.connection.cursor()
+    curSelect.execute('select * from albums')
+    consulta = curSelect.fetchall()
+    #print(consulta)    
+    
+    return render_template('index.html', listAlbums = consulta) 
+
+
 
 @app.route('/guardar', methods=['POST'])
 def guardar():

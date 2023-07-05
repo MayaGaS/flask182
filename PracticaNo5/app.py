@@ -44,12 +44,39 @@ def guardar():
     return redirect(url_for('index'))
 
 
+@app.route('/editar/<id>')
+def editar(id):
+    curEditar = mysql.connection.cursor()
+    curEditar.execute('select * from albums where id = %s', (id,))
+    consulId = curEditar.fetchone()
+
+    return render_template('editarAlbum.html', album = consulId)
+
 @app.route('/eliminar')
 def eliminar():
     return "Se eliminó el album en la BD"
 
+@app.route('/actualizar/<id>', methods=['POST'])
+def actualizar(id):
+    if request.method=='POST':
+        Vtitulo= request.form['txtTitulo']
+        Vartista= request.form['txtArtista']
+        Vanio= request.form['txtAnio']
 
+        curAct = mysql.connection.cursor()
+        curAct.execute('update albums set titulo = %s, artista = %s, anio = %s where id = %s', (Vtitulo, Vartista, Vanio, id))
+        mysql.connection.commit()
 
+    flash('Album Actualizado Correctamente')
+    return redirect(url_for('index'))
+
+@app.route('/aliminar/<id>')
+def editar(id):
+    curEliminar = mysql.connection.cursor()
+    curEliminar.execute('select * from albums where id = %s', (id,))
+    consulId = curEliminar.fetchone()
+
+    return render_template('eliminarAlbum.html', album = consulId)
 
 # Ejecución de servidor
 if __name__== '__main__':

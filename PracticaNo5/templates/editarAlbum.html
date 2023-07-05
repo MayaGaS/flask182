@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <center>
+    <br>
+    <h1> Actualizar Album </h1>
+    <br>
+    <form action="/actualizar/{{ album.0 }}" method="POST">
+        
+            <form action="/guardar" method="POST"> 
+        
+                <input type="text" name="txtTitulo" value="{{ album.1 }}" >
+                <input type="text" name="txtArtista" value="{{ album.2 }}" >
+                <input type="number" name="txtAnio" value="{{ album.3 }}" >
+        
+                <button type="submit"> Guardar </button>
+        
+    </form>
+        </center>
+
+</head>

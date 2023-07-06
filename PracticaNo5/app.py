@@ -70,13 +70,26 @@ def actualizar(id):
     flash('Album Actualizado Correctamente')
     return redirect(url_for('index'))
 
-@app.route('/aliminar/<id>')
+
+#-- ELIMINAR --
+@app.route('/eliminar/<id>')
 def editar(id):
     curEliminar = mysql.connection.cursor()
     curEliminar.execute('select * from albums where id = %s', (id,))
     consulId = curEliminar.fetchone()
 
     return render_template('eliminarAlbum.html', album = consulId)
+
+@app.route('/borrar/<id>', methods = ['POST'])
+def borrar(id):
+    curBorrar = mysql.connection.cursor()
+    curBorrar.execute('delete from albums where id = %s', (id,))
+    mysql.connection.commit()
+
+    flash('Album Eliminado Correctamente')
+
+    return redirect(url_for('index'))
+
 
 # Ejecución de servidor
 if __name__== '__main__':

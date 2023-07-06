@@ -30,7 +30,7 @@ def index():
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
-    if request.method=='POST':
+    if request.method == 'POST':
         Vtitulo= request.form['txtTitulo']
         Vartista= request.form['txtArtista']
         Vanio= request.form['txtAnio']
@@ -52,9 +52,6 @@ def editar(id):
 
     return render_template('editarAlbum.html', album = consulId)
 
-@app.route('/eliminar')
-def eliminar():
-    return "Se eliminó el album en la BD"
 
 @app.route('/actualizar/<id>', methods=['POST'])
 def actualizar(id):
@@ -73,7 +70,7 @@ def actualizar(id):
 
 #-- ELIMINAR --
 @app.route('/eliminar/<id>')
-def editar(id):
+def eliminar(id):
     curEliminar = mysql.connection.cursor()
     curEliminar.execute('select * from albums where id = %s', (id,))
     consulId = curEliminar.fetchone()

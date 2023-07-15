@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <center>
+    <br>
+    <h1> Actualizar Flor </h1>
+    <br>
+    <form action="/actualizar/{{ flor.0 }}" method="POST">
+        
+            <form action="/guardar" method="POST"> 
+        
+                <input type="text" name="txtNombre" value="{{ flor.1 }}" >
+                <input type="text" name="txtCantidad" value="{{ flor.2 }}" >
+                <input type="number" name="txtPrecio" value="{{ flor.3 }}" >
+        
+                <button type="submit"> Guardar </button>
+        
+    </form>
+        </center>
+
+</head>

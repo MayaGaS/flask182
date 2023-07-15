@@ -65,3 +65,7 @@ def actualizar(id):
 
     flash('Flor Actualizada Correctamente')
     return redirect(url_for('index'))
+
+# Ejecución de servidor
+if __name__== '__main__':
+    app.run(port= 5000, debug=True)

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <center>
+    <br>
+    <h1> Buscar Flor </h1>
+    <br>
+
+      <form action="/buscar/{{ flor.0 }}" method="GET">
+        
+        <input type="text" name="txtNombre" value="{{ flor.1 }}" >
+        <input type="number" name="txtCantidad" value="{{ flor.2 }}" >
+        <input type="number" name="txtPrecio" value="{{ flor.3 }}" >
+
+        <button type="submit"> Buscar </button>
+
+      </form>
+        </center>
+
+</head>
+  

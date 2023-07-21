@@ -1,20 +1,10 @@
-<!DOCTYPE html>
+{% extends 'plantilla.html'%}
 
-<html lang="en">
-<head>
+{% block body %}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> Eliminar Albums </title>
-</head>
-
-<body>
-    <center>
-        <br>
         <h1> Eliminar Album </h1>
-        <br>
-        <br>
+
         <h2> ¿Estás seguro que quieres eliminar? </h2>
         <form action="/borrar/{{ album.0 }}" method="POST">
         
@@ -25,6 +15,4 @@
                 <button type="submit"> Borrar </button>
         
         </form>
-    </center>
-</body>
-</html>
+{% endblock %}

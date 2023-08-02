@@ -8,18 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <h1> Actualizar Album </h1>
+    <h1 class="text-center mt-5 mb-5"> Actualizar Album </h1>
 
     <form action="/actualizar/{{ album.0 }}" method="POST">
-        
-            <form action="/guardar" method="POST"> 
-        
-                <input type="text" name="txtTitulo" value="{{ album.1 }}" >
-                <input type="text" name="txtArtista" value="{{ album.2 }}" >
-                <input type="number" name="txtAnio" value="{{ album.3 }}" >
-        
-                <button type="submit"> Guardar </button>
-        
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <div class="card card-body">
+                        <form action="/guardar" method="POST">
+
+                            <div class="text-center mt-3 mb-3">
+                                <input type="text" name="txtTitulo" value="{{ album.1 }}">
+                            </div>
+
+                            <div class="text-center mt-3 mb-3">
+                                <input type="text" name="txtArtista" value="{{ album.2 }}">
+                            </div>
+
+                            <div class="text-center mt-3 mb-3">
+                                <input type="number" name="txtAnio" value="{{ album.3 }}">
+                            </div>
+                            <div class="d-grid gap-1 col-2 mx-auto">
+                                <button type="submit" class="btn btn-outline-success"> Guardar </button>
+                            </div> <!-- button -->
+                    </div> <!-- card -->
+                </div> <!-- column5 -->
+            </div> <!-- row -->
+        </div> <!-- container -->
+
     </form>
 
 

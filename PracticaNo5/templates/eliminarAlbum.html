@@ -2,17 +2,31 @@
 
 {% block body %}
 
+<h1 class="display-1 text-center mt-4 mb-4 text-danger"> Eliminar Album </h1>
 
-        <h1> Eliminar Album </h1>
+<h2 class="text-center mt-5 mb-5"> ¿Estás seguro que quieres eliminar? </h2>
 
-        <h2> ¿Estás seguro que quieres eliminar? </h2>
-        <form action="/borrar/{{ album.0 }}" method="POST">
-        
-                <input type="text" name="txtTitulo" value="{{ album.1 }}" >
-                <input type="text" name="txtArtista" value="{{ album.2 }}" >
-                <input type="number" name="txtAnio" value="{{ album.3 }}" >
-        
-                <button type="submit"> Borrar </button>
-        
-        </form>
+<div class="container">
+        <div class="row justify-content-center">
+                <div class="col-md-5">
+                        <div class="card card-body">
+                                <form action="/borrar/{{ album.0 }}" method="POST">
+                                        <div class="text-center mt-3 mb-3">
+                                                <input type="text" name="txtTitulo" value="{{ album.1 }}">
+                                        </div>
+                                        <div class="text-center mt-3 mb-3">
+                                                <input type="text" name="txtArtista" value="{{ album.2 }}">
+                                        </div>
+                                        <div class="text-center mt-3 mb-3">
+                                                <input type="number" name="txtAnio" value="{{ album.3 }}">
+                                        </div>
+                                        <div class="d-grid gap-1 col-6 mx-auto">
+                                                <button type="submit" class="btn btn-outline-success"> Borrar </button>
+                                        </div> <!-- button -->
+                                </form>
+                        </div> <!-- card -->
+                </div> <!-- column5 -->
+        </div> <!-- row -->
+</div> <!-- container -->
+
 {% endblock %}
